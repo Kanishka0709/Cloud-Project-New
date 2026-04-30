@@ -21,8 +21,8 @@ phases:
       - mkdir -p deployment/scripts
       - cp Backend/target/Finsmart_Finances-0.0.1-SNAPSHOT.jar deployment/
       - cp appspec.yml deployment/ 2>/dev/null || cp Backend/appspec.yml deployment/ 2>/dev/null || echo "no appspec"
-      - cp Backend/scripts/start.sh deployment/scripts/
-      - cp Backend/scripts/stop.sh deployment/scripts/
+      - cp scripts/start.sh deployment/scripts/
+      - cp scripts/stop.sh deployment/scripts/
       - cp -r Frontend/build deployment/frontend-build
 artifacts:
   files:
