@@ -18,7 +18,9 @@ phases:
       - echo "===== Building Spring Boot Backend ====="
       - cd Backend
       - chmod +x mvnw
-      - ./mvnw clean package -DskipTests
+      - ./mvnw clean package -DskipTests -e 2>&1 | tail -100
+      - echo "Maven exit code: $?"
+      - ls -la Backend/target/ || echo "target dir missing"
       - cd ..
 
   post_build:
