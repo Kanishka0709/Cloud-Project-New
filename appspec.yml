@@ -2,28 +2,28 @@ version: 0.0
 os: linux
 
 files:
-  - source: deployment/app.jar
-    destination: /opt/bookmyshow
-  - source: deployment/frontend/
-    destination: /opt/bookmyshow/frontend
+  - source: deployment/Finsmart_Finances-0.0.1-SNAPSHOT.jar
+    destination: /opt/finsmart/
+  - source: deployment/frontend-build/
+    destination: /opt/finsmart/frontend/
 
 hooks:
-  BeforeInstall:
-    - location: scripts/stop_server.sh
+  ApplicationStop:
+    - location: deployment/scripts/stop.sh
       timeout: 60
       runas: root
 
-  AfterInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 120
+  BeforeInstall:
+    - location: deployment/scripts/before_install.sh
+      timeout: 60
       runas: root
 
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: deployment/scripts/start.sh
       timeout: 60
       runas: root
 
   ValidateService:
-    - location: scripts/validate_service.sh
+    - location: deployment/scripts/validate.sh
       timeout: 30
       runas: root
