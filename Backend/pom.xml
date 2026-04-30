@@ -6,11 +6,11 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.5</version>
+    <relativePath/>
+</parent>
 	<groupId>com.finsmart</groupId>
 	<artifactId>Finsmart_Finances</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
