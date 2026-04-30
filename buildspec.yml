@@ -12,14 +12,14 @@ phases:
       - echo "Building React Frontend"
       - cd Frontend && npm run build && cd ..
       - echo "Building Spring Boot Backend"
-      - cd Backend && chmod +x mvnw && ./mvnw clean package -DskipTests -e && cd ..
+      - cd Backend && chmod +x mvnw && ./mvnw clean package -DskipTests -e 2>&1 && cd ..
       - echo "BUILD DONE - listing target"
-      - ls -la Backend/target/ || echo "TARGET DIR EMPTY OR MISSING"
+      - ls -la Backend/target/
   post_build:
     commands:
       - echo "Preparing deployment package"
       - mkdir -p deployment/scripts
-      - cp Backend/target/*.jar deployment/
+      - cp Backend/target/Finsmart_Finances-0.0.1-SNAPSHOT.jar deployment/
       - cp appspec.yml deployment/ 2>/dev/null || cp Backend/appspec.yml deployment/ 2>/dev/null || echo "no appspec"
       - cp Backend/scripts/start.sh deployment/scripts/
       - cp Backend/scripts/stop.sh deployment/scripts/
