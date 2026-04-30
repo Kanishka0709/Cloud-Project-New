@@ -12,12 +12,13 @@ phases:
       - echo "Building React Frontend"
       - cd Frontend && npm run build && cd ..
       - echo "Building Spring Boot Backend"
-      - cd Backend && chmod +x mvnw && ./mvnw clean package -DskipTests && cd ..
+      - cd Backend && chmod +x mvnw && ./mvnw clean package -DskipTests -e && cd ..
+      - echo "BUILD DONE - listing target"
+      - ls -la Backend/target/ || echo "TARGET DIR EMPTY OR MISSING"
   post_build:
     commands:
       - echo "Preparing deployment package"
       - mkdir -p deployment/scripts
-      - ls Backend/target/
       - cp Backend/target/*.jar deployment/
       - cp appspec.yml deployment/ 2>/dev/null || cp Backend/appspec.yml deployment/ 2>/dev/null || echo "no appspec"
       - cp Backend/scripts/start.sh deployment/scripts/
