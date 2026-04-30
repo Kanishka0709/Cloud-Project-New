@@ -25,7 +25,8 @@ phases:
     commands:
       - echo "===== Preparing deployment package ====="
       - mkdir -p deployment/scripts
-      - cp Backend/target/Finsmart_Finances-0.0.1-SNAPSHOT.jar deployment/
+      - ls Backend/target/*.jar
+      - cp Backend/target/Finsmart-Finances-0.0.1-SNAPSHOT.jar deployment/
       - cp Backend/appspec.yml deployment/ 2>/dev/null || cp Backend/appspec.yaml deployment/appspec.yml
       - cp Backend/scripts/start.sh deployment/scripts/
       - cp Backend/scripts/stop.sh deployment/scripts/
