@@ -1,3 +1,4 @@
+import org.springframework.beans.factory.annotation.Value;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Value("${cors.allowed-origins:http://localhost:3000}")
