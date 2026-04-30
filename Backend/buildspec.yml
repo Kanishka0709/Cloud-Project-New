@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - apt-get update
+      - apt-get install -y maven
+
+  build:
+    commands:
+      - chmod +x scripts/*.sh
+      - echo "Building project..."
+      - mvn clean package -DskipTests
+
+artifacts:
+  files:
+    - target/*.jar
+    - appspec.yaml
+    - scripts/*

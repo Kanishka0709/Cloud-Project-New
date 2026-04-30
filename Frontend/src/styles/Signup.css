@@ -1,0 +1,194 @@
+.signup-split-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'Montserrat', Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+.signup-split-left {
+  flex: 1.1;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+  min-width: 320px;
+  max-width: 520px;
+  border-radius: 32px 0 0 32px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.10);
+  /* Match the height of the card */
+  height: auto;
+}
+.signup-split-img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+.signup-split-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0; top: 0;
+  background: linear-gradient(120deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.45) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 32px 32px 32px;
+}
+.signup-split-quote {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  text-shadow: 0 2px 8px #0008;
+}
+.signup-split-name {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.signup-split-title {
+  font-size: 0.98rem;
+  color: #e3eeff;
+}
+.signup-split-company {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.signup-split-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  min-width: 320px;
+  padding: 0 24px;
+  /* Ensure right and left are same height */
+}
+.signup-form-card {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.10);
+  padding: 48px 48px 36px 48px;
+  min-width: 420px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Set explicit height for alignment */
+  min-height: 400px;
+}
+.signup-form-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 8px;
+}
+.signup-form-desc {
+  color: #888;
+  font-size: 1.08rem;
+  margin-bottom: 24px;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.signup-form-row {
+  display: flex;
+  gap: 18px;
+}
+.signup-form-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e3eafc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f7faff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.signup-form input:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  box-shadow: 0 2px 8px #1976d220;
+}
+.signup-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00b8d9 0%, #1976d2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #1976d220;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.signup-form button:hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 4px 16px #1976d220;
+  transform: scale(1.03);
+}
+.success-message {
+  color: #28a745;
+  font-size: 1rem;
+  margin-top: 8px;
+  text-align: center;
+}
+.error-message {
+  color: #d63031;
+  font-size: 1rem;
+  margin-top: 8px;
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .signup-split-left, .signup-split-right {
+    height: 100%;
+  }
+  .signup-split-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .signup-split-img {
+    height: 100%;
+    min-height: 400px;
+    max-height: 100%;
+  }
+  .signup-form-card {
+    min-height: 400px;
+    height: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .signup-split-container { flex-direction: column; max-width: 100vw; padding: 0; }
+  .signup-split-left, .signup-split-right { max-width: 100vw; border-radius: 0; height: auto; }
+  .signup-form-card { border-radius: 0 0 32px 32px; min-height: 320px; }
+  .signup-split-img { min-height: 220px; }
+}
+@media (max-width: 600px) {
+  .signup-form-card { padding: 18px 6px; min-width: 0; max-width: 98vw; min-height: 220px; }
+  .signup-split-overlay { padding: 18px 8px; }
+  .signup-split-quote { font-size: 0.98rem; }
+  .signup-split-img { min-height: 120px; }
+}

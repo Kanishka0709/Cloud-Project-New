@@ -1,0 +1,208 @@
+.sip-calculator {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 1200px;
+}
+
+.calculator-container {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Left Section */
+.left-section {
+  flex: 2;
+  min-width: 400px;
+}
+
+/* Calculator Title */
+.calculator-title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.calculator-title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(16, 185, 129, 0.2);
+}
+
+.calculator-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #10b981;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 32px;
+}
+
+.input-group {
+  margin-bottom: 24px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.value-display {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Summary Section */
+.summary-section {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.summary-item:last-child {
+  margin-bottom: 0;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legend-color.invested {
+  background: #e5e7eb;
+}
+
+.legend-color.returns {
+  background: #3b82f6;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.chart-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .left-section {
+    min-width: auto;
+  }
+  
+  .right-section {
+    min-width: auto;
+  }
+  
+  .sip-calculator {
+    padding: 24px;
+    margin: 24px auto;
+  }
+} 

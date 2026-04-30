@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+.settings-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.settings-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.10);
+  padding: 40px 36px 32px 36px;
+  min-width: 380px;
+  max-width: 650px;   /* Increased for better alignment */
+  width: 100%;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.settings-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.settings-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #1976d220;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px; /* slightly more gap between rows */
+}
+.settings-row {
+  display: flex;
+  gap: 24px; /* slightly more gap for clarity */
+}
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.settings-field label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1976d2;
+}
+.settings-field input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e3eafc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f7faff;
+  transition: border 0.2s, box-shadow 0.2s;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.settings-field input:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  box-shadow: 0 2px 8px #1976d220;
+}
+.settings-save-btn {
+  margin-top: 18px;
+  background: linear-gradient(90deg, #00b8d9 0%, #1976d2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 0;
+  box-shadow: 0 2px 12px #1976d220;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.settings-save-btn:hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 4px 16px #1976d220;
+  transform: scale(1.03);
+}
+@media (max-width: 600px) {
+  .settings-card {
+    padding: 18px 6px 18px 6px;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .settings-header h2 {
+    font-size: 1.2rem;
+  }
+  .settings-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .settings-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+} 

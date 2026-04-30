@@ -1,0 +1,20 @@
+.expense-container {
+padding: 30px;
+max-width: 1000px;
+margin: auto;
+background-color: #f9f9f9;
+border-radius: 12px;
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h4 {
+color: #333;
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+table {
+margin-top: 20px;
+background-color: #fff;
+}

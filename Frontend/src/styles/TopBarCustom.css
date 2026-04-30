@@ -1,0 +1,26 @@
+/* finsmart-frontend/src/styles/TopBarCustom.css */
+.finsmart-topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0.75rem 2rem;
+  height: 64px;
+  z-index: 30;
+}
+.finsmart-topbar .topbar-btn {
+  background: linear-gradient(90deg, #007BFF 0%, #00C6FF 100%);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.10);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.finsmart-topbar .topbar-btn:hover {
+  background: linear-gradient(90deg, #012042 0%, #0c3a51 100%);
+} 

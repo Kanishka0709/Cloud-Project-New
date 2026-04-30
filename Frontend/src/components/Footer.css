@@ -1,0 +1,16 @@
+.footer-pro {
+    background: #3a5a99; /* lighter medium blue */
+    color: #fff;
+    border-top: 2px solid #8fbdef;
+    box-shadow: 0 -2px 12px rgba(26,35,126,0.07);
+    padding: 1px 0; /* short but readable */
+    font-size: 1.08rem;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+@media (max-width: 768px) {
+    .footer-pro {
+        font-size: 0.98rem;
+        padding: 1px 0;
+    }
+}

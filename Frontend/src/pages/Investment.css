@@ -1,0 +1,19 @@
+.investment-container {
+padding: 30px;
+max-width: 1000px;
+margin: auto;
+background-color: #fefefe;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h4 {
+color: #2c3e50;
+font-weight: 600;
+}
+
+table {
+margin-top: 20px;
+background-color: white;
+}
